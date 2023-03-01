@@ -7,10 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <!-- jQuery and Bootstrap JS -->
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
 
-    <!-- jQuery and Bootstrap JS -->
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -19,9 +18,9 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">
-	      <img src="../images/Cookie.png" alt="My Brand Logo" width="30" height="24" class="d-inline-block align-text-top">
-	      Cookie
-	    </a>
+                <img src="../images/Cookie.png" alt="My Brand Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Cookie
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
