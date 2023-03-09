@@ -12,6 +12,27 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-riqxC9b/p8fhQWq3BKV6TNGT2+1KtiOxG6SnfD0mnJU6F+U6oPYU7V0J4ztuO7Z4epjKb+J01L1YcWsJfSgS9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            color: #495057;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,12 +40,12 @@
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-md-6">
+                <h1>ĐĂNG NHẬP</h1>
                 <div class="card shadow-lg p-3 mb-5 bg-white rounded">
                     <div class="card-body">
                         <div class="logo mb-3">
                             <img src="Cookie.png" width="100" height="100" alt="Logo">
                         </div>
-                        <h3 class="text-center mb-4">Login Form</h3>
                         <form action="index.php?act=login" method="post">
                             <div class="form-group">
                                 <label for="email">Email</label>
@@ -32,7 +53,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" id="email" placeholder="Enter Email" name = "email">
+                                    <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -41,10 +62,10 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-lock"></i></span>
                                     </div>
-                                    <input type="password" class="form-control" id="password" placeholder="Enter password" name = "password">
+                                    <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
                                 </div>
                             </div>
-                            <input type="submit" class="btn btn-primary btn-block" name= "login" value="Login"></input>
+                            <input type="submit" class="btn btn-primary btn-block" name="login" value="Login"></input>
                         </form>
                         <a href="index.php?act=signup">Don't have any account? Sign up here!</a>
                     </div>
@@ -53,12 +74,16 @@
 
             <h1>
                 <?php
-                    echo $message;
-                ?>  
+                echo $message;
+                ?>
             </h1>
 
         </div>
     </div>
+
+    
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

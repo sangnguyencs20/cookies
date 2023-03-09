@@ -1,7 +1,7 @@
 <?php
-    function addCategory($cateName)
+    function addCategory($cateName, $img)
     {
-        $sql = "INSERT INTO category (name) VALUES ('$cateName')";
+        $sql = "INSERT INTO category(name, img) VALUES('$cateName', '$img')";
         pdo_execute($sql);
         $noti = "Add successfully";
     }

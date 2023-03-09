@@ -11,7 +11,10 @@ if (isset($_GET['act'])) {
         case 'addCategory':
             if (isset($_POST['addNewCate']) && ($_POST['addNewCate'])) {
                 $cateName = $_POST['cateName'];
-                addCategory($cateName);
+                $img = $_FILES['img']['name'];
+                $target_dir = "../images/categories";
+                $target_file = $target_dir . basename($_FILES["img"]["name"]);
+                addCategory($cateName, $img);
                 $noti = "Add successfully";
             }
             include "category/add.php";
@@ -74,6 +77,7 @@ if (isset($_GET['act'])) {
             }
             $cateList = getAllCategory();
             $productList = getAllProduct($keyword, $cate);
+            
             include "product/productList.php";
             break;
         case 'deleteProduct':
