@@ -1,0 +1,11 @@
+li {
+    display: inline;
+    padding: 0 20px;
+}
+
+#categories {
+    margin: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

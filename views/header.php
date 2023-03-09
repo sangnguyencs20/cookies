@@ -27,23 +27,26 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.php">iPhone</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?act=addCategory">Categories</a>
+                        <a class="nav-link" href="#">Tablet</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?act=addProduct">Products</a>
+                        <a class="nav-link" href="#">Item 1</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?act=customerList">Customers</a>
+                        <a class="nav-link" href="#">Customers</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php?act=stats">Statistics</a>
-                    </li>
-                </ul>
+                <?php
+                if (isset($_SESSION['account'])) {
+                    extract($_SESSION['account']);
+                    echo "Hello, ";
+                    echo "<span class='text-primary'> $username</span>";
+                    echo '<a class="nav-link" href="index.php?act=logout">Logout</a>';
+                }
+                ?>
             </div>
         </div>
     </nav>
