@@ -1,10 +1,39 @@
+body {
+    background-color: rgb(76, 76, 76);
+    color: white;
+}
+
 li {
     display: inline;
     padding: 0 20px;
 }
 
+h1 {
+    text-align: center;
+    margin: 5% 0%;
+}
+
+#commitments {
+    display: flex;
+    margin: 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commitment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.commit-text {
+    margin-top: 5%;
+}
+
 #categories {
-    margin: 1%;
+    margin: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;

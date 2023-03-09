@@ -25,38 +25,43 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">iPhone</a>
+            <a class="nav-link" href="/iphone">iPhone</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">iPad</a>
+            <a class="nav-link" href="/ipad">iPad</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Mac</a>
+            <a class="nav-link" href="/mac">Mac</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Watch</a>
+            <a class="nav-link" href="/watch">Watch</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Âm thanh</a>
+            <a class="nav-link" href="/sounding">Âm thanh</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Phụ kiện</a>
+            <a class="nav-link" href="/accessories">Phụ kiện</a>
           </li>
         </ul>
       </div>
       <form class="d-flex justify-content-center">
         <input class="form-control me-3" type="search" placeholder="Bạn đang tìm gì vậy...">
-        <button class="btn btn-outline-secondary rounded-circle me-3" type="submit">
+        <button class="btn btn-outline-secondary rounded-circle" style="border: none;" type="submit">
           <span style="font-size: 20px; color: white;">
             <i class="fas fa-search"></i>
           </span>
         </button>
-        <button class="btn btn-outline-secondary rounded-circle" type="button">
+        <button class="btn btn-outline-secondary rounded-circle" style="border: none;" type="button">
           <span style="font-size: 20px; color: white;">
             <i class="fas fa-shopping-cart"></i>
           </span>
         </button>
       </form>
+      <button class="btn btn-outline-secondary rounded-circle" style="border: none;" type="button">
+        <span style="font-size: 20px; color: white;">
+          <i class="far fa-user"></i>
+        </span>
+      </button>
     </div>
   </header>
 
@@ -88,48 +93,109 @@
     </button>
   </div>
 
-  <div id="categories" class="row">
-    <div class="col-sm-2">
-      <button type="button" class="btn btn-dark btn-block" style="border-radius: 15px; width: 100%;">
-        <img src="../images/categories/iphone.webp" alt="iPhone" style="height: 100px;">
-        <p>iPhone</p>
-      </button>
-    </div>
-    <div class="col-sm-2">
-      <button type="button" class="btn btn-dark btn-block" style="border-radius: 15px; width: 100%;">
-        <img src="../images/categories/ipad.webp" alt="iPad" style="height: 100px;">
-        <p>iPad</p>
-      </button>
+  <div id="commitments">
+    <div class="commitment">
+      <span style="font-size: 20px; color: rgb(255, 255, 255);">
+        <i class="far fa-check-circle fa-2x"></i>
+      </span>
+      <p class="commit-text">Mẫu mã đa dạng, chính hãng</p>
     </div>
 
-    <div class="col-sm-2">
-      <button type="button" class="btn btn-dark btn-block" style="border-radius: 15px; width: 100%;">
-        <img src="../images/categories/mac.webp" alt="Mac" style="height: 100px;">
-        <p>Mac</p>
-      </button>
+    <div class="commitment">
+      <span style="font-size: 20px; color: rgb(255, 255, 255);">
+        <i class="fas fa-truck fa-2x"></i>
+      </span>
+      <p class="commit-text"">Giao hàng toàn quốc</p>
     </div>
 
-    <div class="col-sm-2">
-      <button type="button" class="btn btn-dark btn-block" style="border-radius: 15px; width: 100%;">
-        <img src="../images/categories/watch.webp" alt="Watch" style="height: 100px;">
-        <p>Watch</p>
-      </button>
+    <div class="commitment">
+      <span style="font-size: 20px; color: rgb(255, 255, 255);">
+        <i class="fas fa-shield-alt fa-2x"></i>
+      </span>
+      <p class="commit-text"">Bảo hành lên đến 12 tháng</p>
     </div>
-
-    <div class="col-sm-2">
-      <button type="button" class="btn btn-dark btn-block" style="border-radius: 15px; width: 100%;">
-        <img src="../images/categories/airpods.webp" alt="Sounding" style="height: 100px;">
-        <p>Sounding</p>
-      </button>
-    </div>
-    <div class="col-sm-2">
-      <button type="button" class="btn btn-dark btn-block" style="border-radius: 15px; width: 100%;">
-        <img src="../images/categories/accessories.webp" alt="Accessories" style="height: 100px;">
-        <p>Accessories</p>
-      </button>
+    
+    <div class="commitment">
+      <span style="font-size: 20px; color: rgb(255, 255, 255);">
+        <i class="fas fa-redo fa-2x"></i>
+      </span>
+      <p class="commit-text"">Đổi trả tại các cửa hàng thuộc hệ thống</p>
     </div>
   </div>
 
+  <div id="categories" class="row">
+    <h1>Các ngành hàng</h1>
+    <div class="col-sm-2">
+      <a href="/iphone">
+        <button type="button" class="btn btn-dark btn-block pt-3" style="border-radius: 15px; width: 100%;">
+          <img src="../images/categories/iphone.webp" alt="iPhone" style="max-height: 100px; max-width: 80%;">
+          <p class="pt-2">iPhone</p>
+        </button>
+      </a>
+    </div>
+    <div class="col-sm-2">
+      <a href="/ipad">
+        <button type="button" class="btn btn-dark btn-block pt-3" style="border-radius: 15px; width: 100%;">
+          <img src="../images/categories/ipad.webp" alt="iPad" style="max-height: 100px; max-width: 80%;">
+          <p class="pt-2">iPad</p>
+        </button>
+      </a>
+    </div>
+
+    <div class="col-sm-2">
+      <a href="/mac">
+        <button type="button" class="btn btn-dark btn-block pt-4" style="border-radius: 15px; width: 100%;">
+          <img src="../images/categories/mac.webp" alt="Mac" style="max-height: 100px; max-width: 80%;">
+          <p class="pt-2">Mac</p>
+        </button>
+      </a>
+    </div>
+
+    <div class="col-sm-2">
+      <a href="/watch">
+        <button type="button" class="btn btn-dark btn-block pt-4" style="border-radius: 15px; width: 100%;">
+          <img src="../images/categories/watch.webp" alt="Watch" style="max-height: 100px; max-width: 80%;">
+          <p class="pt-2">Watch</p>
+        </button>
+      </a>
+    </div>
+
+    <div class="col-sm-2">
+      <a href="/sounding">
+        <button type="button" class="btn btn-dark btn-block pt-3" style="border-radius: 15px; width: 100%;">
+          <img src="../images/categories/airpods.webp" alt="Sounding" style="max-height: 100px; max-width: 80%;">
+          <p class="pt-2">Âm thanh</p>
+        </button>
+      </a>
+    </div>
+    <div class="col-sm-2">
+      <a href="/accessories">
+        <button type="button" class="btn btn-dark btn-block pt-3" style="border-radius: 15px; width: 100%;">
+          <img src="../images/categories/accessories.webp" alt="Accessories" style="max-height: 100px; max-width: 80%;">
+          <p class="pt-2">Phụ kiện</p>
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <div class="category-iphone">
+    <h1><i class="fab fa-apple"></i> iPhone</h1>
+  </div>
+  <div class="category-iphone">
+    <h1><i class="fab fa-apple"></i> iPad</h1>
+  </div>
+  <div class="category-iphone">
+    <h1><i class="fab fa-apple"></i> Mac</h1>
+  </div>
+  <div class="category-iphone">
+    <h1><i class="fab fa-apple"></i> Watch</h1>
+  </div>
+  <div class="category-iphone">
+    <h1><i class="fab fa-apple"></i> Airpods</h1>
+  </div>
+  <div class="category-iphone">
+    <h1>Accessories</h1>
+  </div>
 
 
   <script>
