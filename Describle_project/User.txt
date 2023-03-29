@@ -1,0 +1,3 @@
+Quản lý tài khoản người dùng:
+_ Hiển thị danh sách người dùng 
+_ Thêm/sửa/xóa người dùng (Xóa mềm)
