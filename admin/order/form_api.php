@@ -18,7 +18,7 @@ if(!empty($_POST)){
 function updateStatus(){
     $id = getPost('id');
     $status = getPost('status');
-    $sql = "update oders set status=$status where id = $id";
+    $sql = "update orders set status=$status where id = $id";
     execute($sql);
     // echo $sql;
 }

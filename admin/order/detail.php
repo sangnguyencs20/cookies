@@ -3,9 +3,9 @@ $title='Chi tiết đơn hàng';
 $baseUrl = '../';
     require_once('../layouts/header.php');
     $orderId = getGet('id');
-    $sql = "select oder_details.*,product.title,product.thumbnail from oder_details left join product on product.id=oder_details.product_id where oder_details.order_id = $orderId" ;
+    $sql = "select order_details.*,product.title,product.thumbnail from order_details left join product on product.id=order_details.product_id where order_details.order_id = $orderId" ;
     $data = executeResult($sql);
-    $sql = "Select * from oders where id = $orderId";
+    $sql = "Select * from orders where id = $orderId";
     $orderItem=executeResult($sql,true);
 ?>
 <div class="row" style="margin-top:20px;">

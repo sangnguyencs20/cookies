@@ -75,10 +75,10 @@ INSERT INTO `feedback` (`id`, `firstname`, `lastname`, `email`, `phone_number`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `galery`
+-- Table structure for table `gallery`
 --
 
-CREATE TABLE `galery` (
+CREATE TABLE `gallery` (
   `id` int(11) NOT NULL,
   `product_id` int(11) DEFAULT NULL,
   `thumbnail` varchar(255) NOT NULL
@@ -87,10 +87,10 @@ CREATE TABLE `galery` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oders`
+-- Table structure for table `orders`
 --
 
-CREATE TABLE `oders` (
+CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
   `fullname` varchar(100) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
@@ -103,10 +103,10 @@ CREATE TABLE `oders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `oders`
+-- Dumping data for table `orders`
 --
 
-INSERT INTO `oders` (`id`, `fullname`, `user_id`, `email`, `phone_number`, `address`, `order_date`, `status`, `total_money`) VALUES
+INSERT INTO `orders` (`id`, `fullname`, `user_id`, `email`, `phone_number`, `address`, `order_date`, `status`, `total_money`) VALUES
 (1, 'Vuong Khanh Linh', 3, 'vuongkhanhlinh99@gmail.com', '0964524611', '109/11/7A đường số 8 phường Linh Xuân - Thủ Đức ', '2022-11-17 23:59:51', 0, 200000),
 (2, 'Hồ Minh Quang', 1, 'hominhquang01@gmail.com', '096564953', '127 Ngô Thì Nhậm - Dĩ An - Bình Dương', '2022-11-17 23:59:51', 1, 300000),
 (3, 'Hồ Minh Quang', 3, 'hominhquang01@gmail.com', '0965649531', '127 Ngô Thì Nhậm, Dĩ An, Dĩ An', '2022-11-28 10:34:55', 1, 6840000),
@@ -125,10 +125,10 @@ INSERT INTO `oders` (`id`, `fullname`, `user_id`, `email`, `phone_number`, `addr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oder_details`
+-- Table structure for table `order_details`
 --
 
-CREATE TABLE `oder_details` (
+CREATE TABLE `order_details` (
   `id` int(11) NOT NULL,
   `order_id` int(11) DEFAULT NULL,
   `product_id` int(11) DEFAULT NULL,
@@ -138,10 +138,10 @@ CREATE TABLE `oder_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `oder_details`
+-- Dumping data for table `order_details`
 --
 
-INSERT INTO `oder_details` (`id`, `order_id`, `product_id`, `price`, `num`, `total_money`) VALUES
+INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `price`, `num`, `total_money`) VALUES
 (1, 1, 3, 100000, 1, 100000),
 (2, 1, 1, 100000, 1, 100000),
 (3, 2, 1, 150000, 1, 100000),
@@ -353,23 +353,23 @@ ALTER TABLE `feedback`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `galery`
+-- Indexes for table `gallery`
 --
-ALTER TABLE `galery`
+ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `oders`
+-- Indexes for table `orders`
 --
-ALTER TABLE `oders`
+ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `oder_details`
+-- Indexes for table `order_details`
 --
-ALTER TABLE `oder_details`
+ALTER TABLE `order_details`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_id` (`product_id`),
   ADD KEY `order_id` (`order_id`);
@@ -418,21 +418,21 @@ ALTER TABLE `feedback`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `galery`
+-- AUTO_INCREMENT for table `gallery`
 --
-ALTER TABLE `galery`
+ALTER TABLE `gallery`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `oders`
+-- AUTO_INCREMENT for table `orders`
 --
-ALTER TABLE `oders`
+ALTER TABLE `orders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `oder_details`
+-- AUTO_INCREMENT for table `order_details`
 --
-ALTER TABLE `oder_details`
+ALTER TABLE `order_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
@@ -458,23 +458,23 @@ ALTER TABLE `user`
 --
 
 --
--- Constraints for table `galery`
+-- Constraints for table `gallery`
 --
-ALTER TABLE `galery`
-  ADD CONSTRAINT `galery_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
+ALTER TABLE `gallery`
+  ADD CONSTRAINT `gallery_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
 
 --
--- Constraints for table `oders`
+-- Constraints for table `orders`
 --
-ALTER TABLE `oders`
-  ADD CONSTRAINT `oders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
 --
--- Constraints for table `oder_details`
+-- Constraints for table `order_details`
 --
-ALTER TABLE `oder_details`
-  ADD CONSTRAINT `oder_details_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
-  ADD CONSTRAINT `oder_details_ibfk_2` FOREIGN KEY (`order_id`) REFERENCES `oders` (`id`);
+ALTER TABLE `order_details`
+  ADD CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`),
+  ADD CONSTRAINT `order_details_ibfk_2` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
 
 --
 -- Constraints for table `product`

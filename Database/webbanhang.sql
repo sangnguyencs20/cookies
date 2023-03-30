@@ -53,7 +53,7 @@ CREATE TABLE `Feedback` (
   `note` varchar(255)
 );
 
-CREATE TABLE `Oders` (
+CREATE TABLE `orders` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `fullname` varchar(100),
   `user_id` int,
@@ -65,7 +65,7 @@ CREATE TABLE `Oders` (
   `total_money` int
 );
 
-CREATE TABLE `Oder_Details` (
+CREATE TABLE `order_details` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `order_id` int,
   `product_id` int,
@@ -80,17 +80,17 @@ CREATE TABLE `Token` (
   `created_at` datetime,
 );
 
-ALTER TABLE `Token` ADD FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);
+ALTER TABLE `Tokens` ADD FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);
 
 ALTER TABLE `User` ADD FOREIGN KEY (`role_id`) REFERENCES `Role` (`id`);
 
 ALTER TABLE `Product` ADD FOREIGN KEY (`category_id`) REFERENCES `Category` (`id`);
 
-ALTER TABLE `Oder_Details` ADD FOREIGN KEY (`product_id`) REFERENCES `Product` (`id`);
+ALTER TABLE `order_details` ADD FOREIGN KEY (`product_id`) REFERENCES `Product` (`id`);
 
 ALTER TABLE `Galery` ADD FOREIGN KEY (`product_id`) REFERENCES `Product` (`id`);
 
-ALTER TABLE `Oder_Details` ADD FOREIGN KEY (`order_id`) REFERENCES `Oders` (`id`);
+ALTER TABLE `order_details` ADD FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
 
-ALTER TABLE `Oders` ADD FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);
+ALTER TABLE `orders` ADD FOREIGN KEY (`user_id`) REFERENCES `User` (`id`);
 

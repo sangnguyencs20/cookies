@@ -93,7 +93,6 @@ label.star:before {
             <div class="stars">
                 <h5 class="mt-4 mr-4">Đánh giá sản phẩm</h5>
                 <form action="">
-
                     <input class="star star-5" id="star-5" type="radio" name="star" />
                     <label class="star star-5" for="star-5"></label>
                     <input class="star star-4" id="star-4" type="radio" name="star" />
