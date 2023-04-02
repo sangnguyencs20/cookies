@@ -57,7 +57,7 @@ $newProductItem = executeResult($sql);
 <h2 class="text-center mt-3 mb-3 font-italic">Màn hình</h2>
 <div class="row container-fluid">
     <?php
-    $sql = " select product.*,category.id as category_id, category.name as name from product left join category on category.id =1  where product.category_id = 1 order by updated_at desc limit 0,4   ";
+    $sql = " select product.*,category.id as category_id, category.name as name from product left join category on category.id = 1  where product.category_id = 1 order by updated_at desc limit 0,4   ";
     $item1 = executeResult($sql);
     foreach($item1 as $screenItem){
         echo '<div class="col-md-4 col-sm-6 col-lg-3 mb-1 product_item ">

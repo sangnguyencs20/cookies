@@ -9,6 +9,7 @@ $sql = "select product.*,category.name as category_name from product left join c
 $relatedProduct = executeResult($sql);
 
 ?>
+
 <style>
 div.price {
     display: flex;
