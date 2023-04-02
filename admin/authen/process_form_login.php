@@ -8,7 +8,7 @@ if (!empty($_POST)) {
     $sql2 = "Select * from user where email = '$email' and password = '$pwd' and deleted = 0 and role_id=2 ";
     $userExit2 = executeResult($sql2, true);
     if ($userExit == null) {
-        $msg = 'Tên đăng nhập hoặc mật khẩu không đúng , vui lòng kiểm tra lại';
+        $msg = 'Tên đăng nhập hoặc mật khẩu không đúng';
     } elseif ($userExit2 != null) {
         $_SESSION['user'] = $userExit;
         $token = $userExit['email'] . time();
