@@ -41,12 +41,10 @@ if($user==null){
                 <img class="mt-2 ml-3" style="width: 40px; height:40px;border-radius:50%"
                     src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="">
             </div>
-            <div class="col-md-9 col-sm-7">
-                <input class="w-100 p-3 bg-" value="Tìm kiếm" type="text" />
-            </div>
+            
             <div class="col-md-1 col-sm-1">
                 <a href="<?=$baseUrl?>authen/logout.php"><button
-                        class="w-100 h-100 p-1 btn btn-outline-danger">Exit</button></a>
+                        class="w-100 h-100 p-1 btn btn-danger ">Exit</button></a>
             </div>
         </div>
         <div class="row">

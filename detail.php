@@ -9,9 +9,75 @@ $sql = "select product.*,category.name as category_name from product left join c
 $relatedProduct = executeResult($sql);
 
 ?>
+
 <link rel="stylesheet" href = "asset/css/detail.css">
 <link rel="stylesheet" href = "asset/css/detail-reponsive.css">
 <script src="https://kit.fontawesome.com/705f176f0b.js" crossorigin="anonymous"></script>
+
+
+<style>
+div.price {
+    display: flex;
+    flex-direction: row;
+}
+
+div.stars {
+    width: 570px;
+    display: flex;
+    /* display: inline-block; */
+}
+
+input.star {
+    display: none;
+}
+
+label.star {
+    float: right;
+    padding: 10px;
+    font-size: 36px;
+    color: #444;
+    transition: all .2s;
+}
+
+input.star:checked~label.star:before {
+    content: '\f005';
+    color: #FD4;
+    transition: all .25s;
+}
+
+input.star-5:checked~label.star:before {
+    color: #FE7;
+    text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked~label.star:before {
+    color: #F62;
+}
+
+label.star:hover {
+    transform: rotate(-15deg) scale(1.3);
+}
+
+label.star:before {
+    content: '\f006';
+    font-family: FontAwesome;
+}
+
+.product_item img {
+    transition: 0.3s;
+}
+
+.product_item img:hover {
+    padding: 4px;
+    cursor: pointer;
+    background-color: #f0f1f2;
+}
+
+.amount {
+    display: flex;
+}
+</style>
+
 <!-- Menuend-->
 <!-- New product -->
             <nav aria-label="breadcrumb">

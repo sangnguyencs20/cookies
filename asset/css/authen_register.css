@@ -1,1 +1,11 @@
+.panel {
+  background-color: rgb(233, 208, 161);
+  width: 500px;
+  border: 1px solid black;
+  margin: 0px auto;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 100px;
+  box-shadow: 5px 10px #bc8359;
+}
 

@@ -22,7 +22,7 @@
     }else{
         $id = 0;
     }
-    $sql="select *from category";
+    $sql="select * from category";
     $categoryItem= executeResult($sql);
 ?>
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
@@ -58,14 +58,14 @@
                                 <select class="form-control" name="category_id" id="category_id" require=>
                                     <option value="">--Chọn--</option>
                                     <?php
-        foreach ($categoryItem as $item){
-           if($itemp['id']==$category_id){
-            echo '<option value =" '.$item['id'].'"> '.$item['name'].'</option> ';
-           }else{
-            echo '<option selected value =" '.$item['id'].'"> '.$item['name'].'</option> ';
-           }
-        }
-        ?>
+                                        foreach ($categoryItem as $item){
+                                        if($itemp['id']==$category_id){
+                                            echo '<option value =" '.$item['id'].'"> '.$item['name'].'</option> ';
+                                        }else{
+                                            echo '<option selected value =" '.$item['id'].'"> '.$item['name'].'</option> ';
+                                        }
+                                        }
+                                    ?>
                                 </select>
                             </div>
                             <div class="form-group">
