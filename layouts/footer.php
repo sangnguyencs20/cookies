@@ -25,19 +25,19 @@
 }
 </style>
 <div class="container-fluid my-5">
-    <footer class="text-white text-center text-lg-start bg-dark">
+    <footer class="text-white text-lg-start bg-dark">
         <!-- Grid container -->
         <div class="container p-4">
             <!--Grid row-->
             <div class="row mt-4">
                 <!--Grid column-->
                 <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-4">About company</h5>
+                    <h5 class="text-uppercase mb-4 text-center">Về chúng tôi</h5>
 
-                    <p>
-                        Cookies - Nơi cung cấp các sản phẩm CHÍNH HÃNG Gaming PC, Laptop, Chuột Gaming, Phím cơ, và
+                    <p class="text-sm-center">
+                        Cookies - Nơi cung cấp các sản phẩm chính hãng như gaming PC, laptop, chuột gaming, bàn phím cơ và
                         các sản phẩm phụ kiện dành cho gamer đến từ các nhãn hàng uy tín tại thị trường Việt Nam như
-                        Razer, Logitech, Corsair, Asus, MSI và các hãng khác.
+                        Razer, Logitech, Corsair, Asus, MSI và hơn thế nữa.
                     </p>
 
 
@@ -61,48 +61,46 @@
 
                 <!--Grid column-->
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-4 pb-1">Search something</h5>
+                    <h5 class="text-uppercase mb-4 pb-1 text-center ">Bạn muốn tìm gì?</h5>
 
                     <div class="form-outline form-white mb-4">
                         <input type="text" id="formControlLg" class="form-control form-control-lg" />
-                        <label class="form-label" for="formControlLg">Search</label>
                     </div>
 
                     <ul class="fa-ul" style="margin-left: 1.65em;">
                         <li class="mb-3">
                             <span class="fa-li">
-                                <i class="fa fa-location-arrow" aria-hidden="true"></i>
-                            </span><span class="ms-2">Warsaw, 00-967,
-                                Poland</span>
+                                <i class="fa fa-location-arrow" style="margin-right: 4px;" aria-hidden="true"></i>
+                            </span><span class="ms-2" style="margin-left: 10px;">HCMUT, Thành phố Thủ Đức</span>
                         </li>
                         <li class="mb-3">
-                            <span class="fa-li"><i class="fa fa-envelope-o" aria-hidden="true"></i></span><span
-                                class="ms-2">vuongkhanhlinh99@gmail.com</span>
+                            <span class="fa-li"><i class="fa fa-envelope-o" style="margin-right: 4px;" aria-hidden="true"></i></span><span
+                                class="ms-2" style="margin-left: 10px;">cookies@hcmut.edu.vn</span>
                         </li>
                         <li class="mb-3">
-                            <span class="fa-li"><i class="fa fa-phone" aria-hidden="true"></i></span><span
-                                class="ms-2">0964524611
+                            <span class="fa-li"><i class="fa fa-phone" style="margin-right: 4px;" aria-hidden="true"></i></span><span
+                                class="ms-2" style="margin-left: 10px;">012-3456-789
                             </span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-4">Opening hours</h5>
+                    <h5 class="text-uppercase mb-4 text-center">Giờ mở cửa</h5>
 
                     <table class="table text-center text-white">
                         <tbody class="fw-normal">
                             <tr>
-                                <td>Mon - Thu:</td>
-                                <td>8am - 9pm</td>
+                                <td>Các ngày trong tuần:</td>
+                                <td>9:00 - 21:00</td>
                             </tr>
                             <tr>
-                                <td>Fri - Sat:</td>
-                                <td>8am - 1am</td>
+                                <td>Cuối tuần:</td>
+                                <td>8:00 - 22:00</td>
                             </tr>
                             <tr>
-                                <td>Sunday:</td>
-                                <td>9am - 10pm</td>
+                                <td>Ngày lễ:</td>
+                                <td>9:00 - 18:00</td>
                             </tr>
                         </tbody>
                     </table>
@@ -114,8 +112,8 @@
 
 
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2020 Copyright:
-            <a class="text-white" href="https://mdbootstrap.com/">byHMQ</a>
+            © 2023 Bản quyền thuộc về
+            <a class="text-white" href="https://mdbootstrap.com/">Cookies Group</a>
         </div>
     </footer>
 </div>
