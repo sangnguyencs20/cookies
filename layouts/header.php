@@ -3,7 +3,7 @@ session_start();
 require_once('utils/utility.php');
 require_once('Database/dbhelper.php');
 $user = getUserToken();
-$sql =  "select * from category";
+$sql = "select * from category";
 $menuItem = executeResult($sql);
 // print_r($user);
 ?>
@@ -33,21 +33,21 @@ $menuItem = executeResult($sql);
 <body>
     <!-- Menustart -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.php"><img style="height: 100px;"
-                src="./asset/photo/logo_headphone_removebg.png" alt=""></a>
+        <a class="navbar-brand" href="index.php"><img style="height: 50px; width: 50px;"
+                src="./asset/logo/logo_trans.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="index.php">Trang chủ <span
+                <a class="nav-item nav-link" href="index.php">Trang chủ <span
                         class="sr-only">(current)</span></a>
                 <?php
-               foreach ($menuItem as $item){
-                echo '<a class="nav-item nav-link" href="category.php?id='.$item['id'].'">'.$item[  'name'].'</a>';
-               }
-               ?>
+                foreach ($menuItem as $item) {
+                    echo '<a class="nav-item nav-link" href="category.php?id=' . $item['id'] . '">' . $item['name'] . '</a>';
+                }
+                ?>
                 <a href="contact.php" class="nav-item nav-link">Liên hệ</a>
             </div>
 
@@ -56,15 +56,15 @@ $menuItem = executeResult($sql);
             <img class="mr-2" style="width: 50px;height:50px;border-radius:80%"
                 src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="">
             <?php
-                if($user == null)
-                    echo '<a href="admin/authen/login.php"><button class="btn btn-primary mt-1 ml-3">Log in</button></a>';
-                else{
-                    echo '<a href="profile.php"><button class="btn btn-primary mt-1 ml-3">Profile</button></a>';
-                    echo '<a href="admin/authen/logout.php"><button class="btn btn-danger mt-1 ml-3">Log out</button></a>';
-                }
+            if ($user == null)
+                echo '<a href="admin/authen/login.php"><button class="btn btn-outline-primary mt-1 ml-3">Đăng nhập</button></a>';
+            else {
+                echo '<a href="profile.php"><button class="btn btn-outline-primary mt-1 ml-3">Tài khoản</button></a>';
+                echo '<a href="admin/authen/logout.php"><button class="btn btn-outline-danger mt-1 ml-3">Đăng xuất</button></a>';
+            }
             ?>
-            
-                <!-- <p class="mt-2" style="font-weight:600; color: purple;"><?=($user['fullname'])?></p>
+
+            <!-- <p class="mt-2" style="font-weight:600; color: purple;"><?= ($user['fullname']) ?></p>
             <a href="../../Project_Webbanhang/admin/authen/logout.php"><button class="btn btn-danger mt-1 ml-3">Log
                     out</button></a> -->
         </div>
