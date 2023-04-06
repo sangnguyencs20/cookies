@@ -133,7 +133,10 @@ label.star:before {
 </div>
 <div class="container-fluid pb-5 mt-5 bd-bottom" style="text-align: center;">
     <h4 class="mb-3">Chi tiết sản phẩm </h4>
-    <?=$product['description']?>
+
+    <?php
+        echo $product['description']
+    ?>
 </div>
 <div class="container-fluid stars bd-bottom">
                 <h5 class="mt-4 mr-4">Đánh giá sản phẩm</h5>
