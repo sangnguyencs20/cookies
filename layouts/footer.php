@@ -41,7 +41,7 @@
                     </p>
 
 
-                    <div class="mt-4">
+                    <div class="mt-4 text-center">
                         <!-- Facebook -->
                         <a type="button" class="btn btn-floating  btn-lg"><i class="fa fa-facebook-official"
                                 aria-hidden="true"></i></a>
