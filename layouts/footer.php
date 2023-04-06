@@ -1,147 +1,183 @@
 <!-- Footer start -->
 <style>
-.cart_icon {
-    position: fixed;
-    z-index: 9;
-    top: 40%;
-    right: 0px;
-}
+    .cart_icon {
+        position: fixed;
+        z-index: 9;
+        top: 40%;
+        right: 0px;
+    }
 
-.cart_icon img {
-    cursor: pointer;
-    margin-right: 0px;
-    width: 60px;
-}
+    .cart_icon img {
+        cursor: pointer;
+        margin-right: 0px;
+        width: 60px;
+    }
 
-.cart_icon .cart_count {
-    font-weight: bold;
-    position: absolute;
-    left: -22px;
-    bottom: 29px;
-    background-color: red;
-    color: white;
-    padding: 10px;
-    border-radius: 100%;
-}
+    .cart_icon .cart_count {
+        font-weight: bold;
+        position: absolute;
+        left: -22px;
+        bottom: 29px;
+        background-color: red;
+        color: white;
+        padding: 10px;
+        border-radius: 100%;
+    }
 </style>
-<div class="container-fluid my-5">
-    <footer class="text-white text-lg-start bg-dark">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <!--Grid row-->
-            <div class="row mt-4">
-                <!--Grid column-->
-                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-4 text-center">Về chúng tôi</h5>
 
-                    <p class="text-sm-center">
+<!-- Remove the container if you want to extend the Footer to full width. -->
+    <!-- Footer -->
+    <footer class="text-lg-start text-white" style="background-color: #3e4551">
+        <!-- Grid container -->
+        <div class="container p-3 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <h6>Về chúng tôi</h6>
+
+                        <p class="small">
                         Cookies - Nơi cung cấp các sản phẩm chính hãng như gaming PC, laptop, chuột gaming, bàn phím cơ và
                         các sản phẩm phụ kiện dành cho gamer đến từ các nhãn hàng uy tín tại thị trường Việt Nam như
                         Razer, Logitech, Corsair, Asus, MSI và hơn thế nữa.
-                    </p>
+                        </p>
+                    </div>
+                    <!--Grid column-->
 
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h6>Hệ thống cửa hàng</h6>
 
-                    <div class="mt-4 text-center">
-                        <!-- Facebook -->
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white small">Xem danh sách cửa hàng</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white small">Nội quy cửa hàng</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white small">Chất lượng phục vụ</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white small">Chính sách bảo hành & đổi trả</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h6>Hỗ trợ khách hàng</h6>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white small">Điều kiện giao dịch chung</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white small">Hướng dẫn mua hàng online</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white small">Chính sách giao hàng</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white small">Hướng dẫn thanh toán</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h6>Về thương hiệu</h6>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white small">Tích điểm quà tặng</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white small">Giới thiệu chúng tôi</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white small">Bán hàng doanh nghiệp</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white small">Chính sách bảo mật thông tin</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h6>Trung tâm bảo hành</h6>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white small">Trung tâm bảo hành Cookcare</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="mb-2"/>
+
+            <!-- Section: Social media -->
+            <section class="text-center">
                         <a type="button" class="btn btn-floating  btn-lg"><i class="fa fa-facebook-official"
                                 aria-hidden="true"></i></a>
-                        <!-- Dribbble -->
                         <a type="button" class="btn btn-floating  btn-lg"><i class="fa fa-instagram"
                                 aria-hidden="true"></i></a>
-                        <!-- Twitter -->
                         <a type="button" class="btn btn-floating  btn-lg"><i class="fa fa-twitter"
                                 aria-hidden="true"></i></a>
-                        <!-- Google + -->
                         <a type="button" class="btn btn-floating  btn-lg"><i class="fa fa-google"
                                 aria-hidden="true"></i></a>
-                        <!-- Linkedin -->
-                    </div>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-4 pb-1 text-center ">Bạn muốn tìm gì?</h5>
-
-                    <div class="form-outline form-white mb-4">
-                        <input type="text" id="formControlLg" class="form-control form-control-lg" />
-                    </div>
-
-                    <ul class="fa-ul" style="margin-left: 1.65em;">
-                        <li class="mb-3">
-                            <span class="fa-li">
-                                <i class="fa fa-location-arrow" style="margin-right: 4px;" aria-hidden="true"></i>
-                            </span><span class="ms-2" style="margin-left: 10px;">HCMUT, Thành phố Thủ Đức</span>
-                        </li>
-                        <li class="mb-3">
-                            <span class="fa-li"><i class="fa fa-envelope-o" style="margin-right: 4px;" aria-hidden="true"></i></span><span
-                                class="ms-2" style="margin-left: 10px;">cookies@hcmut.edu.vn</span>
-                        </li>
-                        <li class="mb-3">
-                            <span class="fa-li"><i class="fa fa-phone" style="margin-right: 4px;" aria-hidden="true"></i></span><span
-                                class="ms-2" style="margin-left: 10px;">012-3456-789
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-4 text-center">Giờ mở cửa</h5>
-
-                    <table class="table text-center text-white">
-                        <tbody class="fw-normal">
-                            <tr>
-                                <td>Các ngày trong tuần:</td>
-                                <td>9:00 - 21:00</td>
-                            </tr>
-                            <tr>
-                                <td>Cuối tuần:</td>
-                                <td>8:00 - 22:00</td>
-                            </tr>
-                            <tr>
-                                <td>Ngày lễ:</td>
-                                <td>9:00 - 18:00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
-
+            </section>
+            <!-- Section: Social media -->
         </div>
+        <!-- Grid container -->
 
-
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2023 Bản quyền thuộc về
-            <a class="text-white" href="https://mdbootstrap.com/">Cookies Group</a>
+        <!-- Copyright -->
+        <div class="text-center p-3 small" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">cookies@hcmut.edu.vn</a>
         </div>
+        <!-- Copyright -->
     </footer>
-</div>
+    <!-- Footer -->
+<!-- End of .container -->
 <!-- cart start -->
 <?php
-if(!isset($_SESSION['cart'])){
-    $_SESSION['cart']= [];
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
 }
-$count =0 ;
-foreach($_SESSION['cart'] as $item){
+$count = 0;
+foreach ($_SESSION['cart'] as $item) {
     $count += $item['num'];
 }
 ?>
 <script type="text/javascript">
-function addCart(productId, num) {
-    $.post('api/ajax_request.php', {
-        'action': 'cart',
-        'id': productId,
-        'num': num
-    }, function(data) {
-        location.reload()
-    })
-}
+    function addCart(productId, num) {
+        $.post('api/ajax_request.php', {
+            'action': 'cart',
+            'id': productId,
+            'num': num
+        }, function (data) {
+            location.reload()
+        })
+    }
 </script>
 <a href="cart.php">
     <span class="cart_icon">
         <img src="asset/photo/cart_icon2_rm.png" alt="">
-        <span class="cart_count"><?=$count?></span>
+        <span class="cart_count">
+            <?= $count ?>
+        </span>
     </span>
 </a>
 
