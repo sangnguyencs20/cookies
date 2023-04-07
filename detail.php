@@ -15,88 +15,27 @@ $relatedProduct = executeResult($sql);
 <script src="https://kit.fontawesome.com/705f176f0b.js" crossorigin="anonymous"></script>
 
 
-<style>
-div.price {
-    display: flex;
-    flex-direction: row;
-}
-
-div.stars {
-    width: 570px;
-    display: flex;
-    /* display: inline-block; */
-}
-
-input.star {
-    display: none;
-}
-
-label.star {
-    float: right;
-    padding: 10px;
-    font-size: 36px;
-    color: #444;
-    transition: all .2s;
-}
-
-input.star:checked~label.star:before {
-    content: '\f005';
-    color: #FD4;
-    transition: all .25s;
-}
-
-input.star-5:checked~label.star:before {
-    color: #FE7;
-    text-shadow: 0 0 20px #952;
-}
-
-input.star-1:checked~label.star:before {
-    color: #F62;
-}
-
-label.star:hover {
-    transform: rotate(-15deg) scale(1.3);
-}
-
-label.star:before {
-    content: '\f006';
-    font-family: FontAwesome;
-}
-
-.product_item img {
-    transition: 0.3s;
-}
-
-.product_item img:hover {
-    padding: 4px;
-    cursor: pointer;
-    background-color: #f0f1f2;
-}
-
-.amount {
-    display: flex;
-}
-</style>
-
 <!-- Menuend-->
 <!-- New product -->
-            <nav aria-label="breadcrumb">
+<nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page"><?=$product['title']?></li>
+                    <li class="breadcrumb-item" aria-current="page"><?=$product['title']?></li>
                 </ol>
             </nav>
+<div class="container">
+    
 <div class="container-fluid pb-5 bd-bottom">
     <div class="row">
-        <div class="col-md-7 pr-4">
+        <div class="col-md-6 pr-4">
             <img style="width: 100%; border-radius:32px; position:sticky; top:0; margin-top:24px;" src="<?=$product['thumbnail']?>" alt="">
         </div>
-        <div class="productBuyInfo col-md-5 pl-4">
+        <div class="productBuyInfo col-md-6 pl-4">
             
             <h3 class="mt-3 mb-3" style = "font-size: 2rem;">
                 <?=$product['title']?>
             </h3>
-            <div class="price">
-                <p style="font-size:30px; font-weight: 500; color: red;"><?=number_format($product['discount'])?> VND</p>
+            <div class="price mb-3">
+                <p style="font-size:26px; font-weight: 500;"><?=number_format($product['discount'])?> VND</p>
                 <p class="mt-3 ml-2" style="font-size:15px;color:grey;text-decoration:line-through">
                     <?=number_format($product['price'])?> VND
                 </p>
@@ -112,12 +51,12 @@ label.star:before {
             <div class="amount">
                 <p class="mr-3 h4">Số lượng</p>
                 <button onclick="addMoreCart(-1)" type="button"
-                    class="minusAmount btn btn-outline-primary mr-3">-</button>
+                    class="minusAmount btn btn-outline-light mr-3">-</button>
                 <input type="number" name="num" id="" value="1"
                     onchange="fixCartNum()"
                     class="amountNumber">
                 <button onclick="addMoreCart(1)" type="button"
-                    class="btn btn-outline-primary plusAmount ml-3">+</button> 
+                    class="btn btn-outline-light plusAmount ml-3">+</button> 
             </div>
             
             <button onclick="addCart(<?=$product['id']?>,$('[name=num]').val())" style="width: 100%;margin:auto;"
@@ -162,7 +101,7 @@ label.star:before {
             <a href="detail.php?id='.$item['id'].'"><img style="width:100%; height:70%; border-radius:10px;margin-bottom:8px;" src="'.$item['thumbnail'].'" alt=""></a>
             <p style="font-weight; font-family: Calibri;" class="text-center h5 ">'.$item['category_name'].'</p>
             <a href="detail.php?id='.$item['id'].'"><p style="font-weight:500;font-family: Calibri;"  class="text-center h4">'.$item['title'].'</p></a>
-            <p style="font-family: Calibri;color:red; font-weight:500;" class="text-center h4">'.number_format($item['discount']).' VND</p>
+            <p style="font-family: Calibri;font-weight:500;" class="text-center h5">'.number_format($item['discount']).' VND</p>
                     </div>';
         }
         ?>
@@ -190,6 +129,7 @@ function fixCartNum() {
 // ví dụ: 
 // 
 </script>
+</div>
 <!-- End New product -->
 
 <!-- Bàn phím end -->
