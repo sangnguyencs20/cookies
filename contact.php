@@ -13,7 +13,7 @@ if(!empty($_POST)){
 }
 ?>
 <div class="container-fluid">
-    <div class="row">
+    <div class="row  p-5">
         <div class="col-md-6 col-sm-12">
             <form method="post">
                 <div class="row">
