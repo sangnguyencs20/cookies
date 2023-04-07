@@ -17,16 +17,15 @@ function execute($sql)
 
 function executeResult($sql, $isSingle = false)
 {
+    //$isSingle = true => return 1 record
     $data = null;
     $conn = mysqli_connect(HOST, USERNAME, PASSWORD, DATABASE);
     mysqli_set_charset($conn, 'utf8');
-    // querry
     $resultset = mysqli_query($conn, $sql);
     if ($isSingle) {
         $data = mysqli_fetch_array($resultset, 1);
     } else {
         while (($row = mysqli_fetch_array($resultset, 1)) != null) {
-            // Tham số 1 ở hàm trên giúp trả kêt quả truy vấn của hàm my_fetch_array ra dạng key và value chứ không phải dạng chỉ mục index
             $data[] = $row;
         }
     }

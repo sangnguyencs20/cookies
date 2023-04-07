@@ -172,7 +172,7 @@ $categoryList = executeResult($sql);
         LIMIT 
             0,4");
 
-            echo '<a style="color: white;" href="/cookies/category.php?id=' . $categoryId . '">' . '<h2 class="text-center mt-3 mb-3">' . $categoryName . '</h2>' . '</a>';
+            echo '<a style="color: white;" href="./category.php?id=' . $categoryId . '">' . '<h2 class="text-center mt-3 mb-3">' . $categoryName . '</h2>' . '</a>';
             echo '<div class="row container-fluid">';
             foreach ($products as $product) {
                 echo '<div class="col-md-4 col-sm-6 col-lg-3 mb-1 product_item">

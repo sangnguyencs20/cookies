@@ -3,9 +3,10 @@ session_start();
 require_once('utils/utility.php');
 require_once('Database/dbhelper.php');
 $user = getUserToken();
+
 $sql = "select * from category";
 $menuItem = executeResult($sql);
-// print_r($user);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,13 +54,13 @@ $menuItem = executeResult($sql);
 
         </div>
         <div class="nav-item d-flex align-items-right">
-            <img class="mr-2" style="width: 40px;height:40px;border-radius:80%"
-                src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="">
+            
             <?php
             if ($user == null)
                 echo '<a href="admin/authen/login.php"><button class="btn btn-primary mt-1 ml-3 btn-sm">Đăng nhập</button></a>';
             else {
-                echo '<a href="profile.php"><button class="btn btn-primary mt-1 ml-3 btn-sm">Tài khoản</button></a>';
+                $id = $user['id'];
+                echo '<a href="profile.php?id='.$id.'"><button class="btn btn-primary mt-1 ml-3 btn-sm">Tài khoản</button></a>';
                 echo '<a href="admin/authen/logout.php"><button class="btn btn-danger mt-1 ml-3 btn-sm">Đăng xuất</button></a>';
             }
             ?>
