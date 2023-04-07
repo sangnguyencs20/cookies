@@ -32,7 +32,7 @@ $menuItem = executeResult($sql);
 
 <body>
     <!-- Menustart -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3e4551">
         <a class="navbar-brand" href="index.php"><img style="height: 50px; width: 50px;"
                 src="./asset/logo/logo_trans.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -41,14 +41,14 @@ $menuItem = executeResult($sql);
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="index.php">Trang chủ <span
+                <a class="nav-item nav-link text-white" href="index.php">Trang chủ <span
                         class="sr-only">(current)</span></a>
                 <?php
                 foreach ($menuItem as $item) {
-                    echo '<a class="nav-item nav-link" href="category.php?id=' . $item['id'] . '">' . $item['name'] . '</a>';
+                    echo '<a class="nav-item nav-link text-white" href="category.php?id=' . $item['id'] . '">' . $item['name'] . '</a>';
                 }
                 ?>
-                <a href="contact.php" class="nav-item nav-link">Liên hệ</a>
+                <a href="contact.php" class="nav-item nav-link text-white">Liên hệ</a>
             </div>
 
         </div>
@@ -57,10 +57,10 @@ $menuItem = executeResult($sql);
                 src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-512.png" alt="">
             <?php
             if ($user == null)
-                echo '<a href="admin/authen/login.php"><button class="btn btn-outline-primary mt-1 ml-3">Đăng nhập</button></a>';
+                echo '<a href="admin/authen/login.php"><button class="btn btn-primary mt-1 ml-3 btn-sm">Đăng nhập</button></a>';
             else {
-                echo '<a href="profile.php"><button class="btn btn-outline-primary mt-1 ml-3">Tài khoản</button></a>';
-                echo '<a href="admin/authen/logout.php"><button class="btn btn-outline-danger mt-1 ml-3">Đăng xuất</button></a>';
+                echo '<a href="profile.php"><button class="btn btn-primary mt-1 ml-3 btn-sm">Tài khoản</button></a>';
+                echo '<a href="admin/authen/logout.php"><button class="btn btn-danger mt-1 ml-3 btn-sm">Đăng xuất</button></a>';
             }
             ?>
 
