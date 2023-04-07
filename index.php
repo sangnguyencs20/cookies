@@ -135,6 +135,7 @@ $categoryList = executeResult($sql);
 
 
 <!-- New product -->
+<div class="mb-2">
 <h2 class=" text-center mt-3 mb-3 text-white">Sản phẩm mới nhất</h2>
         <div class="container-fluid">
             <div class="row">
@@ -188,6 +189,7 @@ $categoryList = executeResult($sql);
             echo '</div>';
         }
         ?>
+</div>
 
         <?php
         require_once('layouts/footer.php');
