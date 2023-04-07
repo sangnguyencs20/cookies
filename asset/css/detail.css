@@ -6,7 +6,7 @@ div.price {
 }
 
 div.stars {
-    width: 80% !important;
+    /* width: 80% !important; */
     display: flex;
     justify-content: center;
     /* display: inline-block; */
@@ -20,7 +20,7 @@ label.star {
     float: right;
     padding: 10px;
     font-size: 36px;
-    color: #444;
+    color: #c0c0c0;
     transition: all .2s;
 }
 
@@ -63,9 +63,15 @@ label.star:before {
 }
 
 /* End default */
-
+body {
+    background-color: #3e3e3f;
+}
+.container {
+    color: white;
+    background-color: #3e3e3f;
+}
 .bd-bottom {
-    border-bottom: solid #d3d3d3 1px;
+    border-bottom: solid #4d4d4d     1px;
     /* width: 80%; */
 }
 
@@ -75,12 +81,11 @@ label.star:before {
     z-index: 1;
     font-size: 20px;
     font-weight: 600;
+    background-color: #292929;
+    color: white;
 }   
 .productBuyInfo {
-    border-left: solid #d3d3d3 1px;
-}
-.container-fluid {
-    padding: 0 10%;
+    border-left: solid #4d4d4d 1px;
 }
 
 input::-webkit-outer-spin-button,
@@ -91,16 +96,16 @@ input::-webkit-inner-spin-button {
 
 .amountNumber {
     max-width: 64px;
-    border: solid #e0dede 1px; 
+    border: solid #5c5c5c 1px; 
     border-radius: 0px; 
     text-align:center;
 }
 
 .service {
-    box-shadow: 4px 2px 24px rgb(177, 177, 177);
+    /* box-shadow: 4px 2px 24px rgb(177, 177, 177); */
     border-radius: 20px;
-    padding: 12px 12px 4px 24px;
-    background-color: #ffe97c;
+    padding: 16px 12px 4px 24px;
+    background-color: #2f3033;
 }
 
 
