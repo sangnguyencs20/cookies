@@ -29,7 +29,7 @@
     <!-- Footer -->
     <footer class="text-lg-start text-white" style="background-color: #3e4551">
         <!-- Grid container -->
-        <div class="container p-3 pb-0">
+        <div class="container p-3 pb-0" style="background-color: #3e4551">
             <!-- Section: Links -->
             <section class="">
                 <!--Grid row-->
