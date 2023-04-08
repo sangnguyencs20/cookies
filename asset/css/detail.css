@@ -66,47 +66,49 @@ label.star:before {
 body {
     background-color: #3e3e3f;
 }
+
 .container {
     color: white;
     background-color: #3e3e3f;
 }
+
 .bd-bottom {
-    border-bottom: solid #4d4d4d     1px;
+    border-bottom: solid #4d4d4d 1px;
     /* width: 80%; */
 }
 
 .breadcrumb {
-    padding-left: 10%;
     width: 100%;
-    z-index: 1;
-    font-size: 20px;
-    font-weight: 600;
-    background-color: #292929;
+    background-color: #262c33;
     color: white;
-}   
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .productBuyInfo {
     border-left: solid #4d4d4d 1px;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .amountNumber {
     max-width: 64px;
-    border: solid #5c5c5c 1px; 
-    border-radius: 0px; 
-    text-align:center;
+    border: solid #5c5c5c 1px;
+    border-radius: 0px;
+    text-align: center;
 }
 
 .service {
     /* box-shadow: 4px 2px 24px rgb(177, 177, 177); */
     border-radius: 20px;
     padding: 16px 12px 4px 24px;
-    background-color: #2f3033;
+    background-color: #262c33;
 }
-
-
-
