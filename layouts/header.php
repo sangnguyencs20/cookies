@@ -42,7 +42,7 @@ $menuItem = executeResult($sql);
     }
 </style>
 
-<body>
+<body style="background-color: 1b1f24">
     <!-- Menustart -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3e4551">
         <a class="navbar-brand" href="index.php"><img style="height: 50px; width: 50px;"
