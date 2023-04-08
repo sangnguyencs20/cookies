@@ -1,0 +1,4 @@
+keyword
+search keyword in category 
+tìm các category có keyword đó -> thêm vào list sản phẩm
+tìm tiếp các sản phẩm có trùng keyword -> thêm vào list sản phẩm

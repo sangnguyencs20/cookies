@@ -60,22 +60,7 @@ $categoryList = executeResult($sql);
         color: white;
     }
 </style>
-<!-- Menuend-->
-<!-- Slides show start -->
-<!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100" src="./asset/photo/tech2.jpg" alt="First slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="./asset/photo/tech3.jpg" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="./asset/photo/tech4.jpg" alt="Third slide">
-        </div>
-    </div>
-</div> -->
-<!-- Slide show stop -->
+
 
 <div id="HomepageCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -134,7 +119,7 @@ $categoryList = executeResult($sql);
   </div>
 
 
-<!-- New product -->
+
 <div class="mb-2">
 <h2 class=" text-center mt-3 mb-3 text-white">Sản phẩm mới nhất</h2>
         <div class="container-fluid">
@@ -151,7 +136,6 @@ $categoryList = executeResult($sql);
             </div>
         </div>
 
-        <!-- End New product -->
 
         <?php
 
