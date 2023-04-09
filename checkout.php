@@ -1,31 +1,36 @@
 <?php
 require_once('layouts/header.php');
+
+
 ?>
 <div class="container mt-4 mb-4">
-    <div class="row">
-        <div class="col-md-7">
-            <table class="table-bordered ">
-                <tr>
-                    <th class="text-center">Stt</th>
-                    <th class="text-center">Thumbnail</th>
-                    <th class="text-center">Tiêu đề</th>
-                    <th class="text-center">Đơn giá</th>
-                    <th style="width: 10px;" class="text-center">Số lượng</th>
-                    <th class="text-center">Thành tiền</th>
-                </tr>
-                <?php
-                if (!isset($_SESSION['cart'])) {
-                    $_SESSION['cart'] = [];
-                }
-                $index = 0;
-                $total = 0;
-                $totalnum = 0;
-                foreach ($_SESSION['cart'] as $item) {
-                    $total += $item['discount'] * $item['num'];
-                    $totalnum += $item['num'];
-                    echo '<tr>
+    <div class="row" style="min-height:max-content">
+        <div class="col-md-8">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="text-center">Stt</th>
+                        <th class="text-center">Thumbnail</th>
+                        <th class="text-center">Tiêu đề</th>
+                        <th class="text-center">Đơn giá</th>
+                        <th style="width: 10px;" class="text-center">Số lượng</th>
+                        <th class="text-center">Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if (!isset($_SESSION['cart'])) {
+                        $_SESSION['cart'] = [];
+                    }
+                    $index = 0;
+                    $total = 0;
+                    $totalnum = 0;
+                    foreach ($_SESSION['cart'] as $item) {
+                        $total += $item['discount'] * $item['num'];
+                        $totalnum += $item['num'];
+                        echo '<tr>
     <td>' . (++$index) . '</td>
-    <td><img src="' . $item['thumbnail'] . '" style="height: 80px"/></td>
+    <td><img src="' . $item['thumbnail'] . '" class="img-thumbnail" style="max-width: 100px;"/></td>
     <td>' . $item['title'] . '</td>
     <td>' . number_format($item['discount']) . ' VND</td>
     <td>
@@ -33,21 +38,22 @@ require_once('layouts/header.php');
     </td>
     <td>' . number_format($item['discount'] * $item['num']) . ' VND</td>
 </tr>';
-                }
-                
-                ?>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th>Tổng tiền</th>
-                    <th class="text-center"><?= number_format($totalnum) ?></th>
-                    <th><?= number_format($total) ?>VND</th>
-                </tr>
+                    }
+                    ?>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Tổng tiền</td>
+                        <td class="text-center"><?= number_format($totalnum) ?></td>
+                        <td><?= number_format($total) ?>VND</td>
+                    </tr>
+                </tbody>
             </table>
 
+
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
             <form method="post" onsubmit="return completeCheckout();">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Họ và tên</label>
