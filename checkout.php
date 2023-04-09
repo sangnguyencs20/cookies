@@ -9,9 +9,8 @@ require_once('layouts/header.php');
             <table class="table table-bordered table-striped">
                 <thead class="thead-light">
                     <tr>
-                        <th class="text-center">Stt</th>
-                        <th class="text-center">Thumbnail</th>
-                        <th class="text-center">Tiêu đề</th>
+                        <th class="text-center">Sản phẩm</th>
+                        <th class="text-center">Tên sản phẩm</th>
                         <th class="text-center">Đơn giá</th>
                         <th style="width: 10px;" class="text-center">Số lượng</th>
                         <th class="text-center">Thành tiền</th>
@@ -29,22 +28,20 @@ require_once('layouts/header.php');
                         $total += $item['discount'] * $item['num'];
                         $totalnum += $item['num'];
                         echo '<tr>
-    <td>' . (++$index) . '</td>
-    <td><img src="' . $item['thumbnail'] . '" class="img-thumbnail" style="max-width: 100px;"/></td>
-    <td>' . $item['title'] . '</td>
-    <td>' . number_format($item['discount']) . ' VND</td>
-    <td>
+    <td style="text-align: center; vertical-align: middle;"><img src="' . $item['thumbnail'] . '" class="img-thumbnail" style="max-width: 100px;"/></td>
+    <td style="text-align: center; vertical-align: middle;">' . $item['title'] . '</td>
+    <td style="text-align: center; vertical-align: middle;">' . number_format($item['discount']) . ' VND</td>
+    <td style="text-align: center; vertical-align: middle;">
     <p class="font-weight-light text-center mt-3">' . $item['num'] . '</p>
     </td>
-    <td>' . number_format($item['discount'] * $item['num']) . ' VND</td>
+    <td style="text-align: center; vertical-align: middle;">' . number_format($item['discount'] * $item['num']) . ' VND</td>
 </tr>';
                     }
                     ?>
                     <tr>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td>Tổng tiền</td>
+                        <td class="text-center">Tổng tiền</td>
                         <td class="text-center"><?= number_format($totalnum) ?></td>
                         <td><?= number_format($total) ?>VND</td>
                     </tr>
