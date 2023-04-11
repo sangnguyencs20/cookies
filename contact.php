@@ -45,8 +45,8 @@ if(!empty($_POST)){
               <div class="row">
                 <div class="col-md-12 form-group mb-5">
             
-                    <label for="exampleInputPassword1">Chủ đề *</label>
-                    <input required name="subject" type="text" class="form-control" id="exampleInputPassword1">
+                    <label for="exampleInputPassword1" class="col-form-label">Chủ đề *</label>
+                    <input required name="subject_name" type="text" class="form-control" id="exampleInputPassword1">
                 </div>
             </div>
               <div class="row">
