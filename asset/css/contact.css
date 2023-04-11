@@ -1,16 +1,8 @@
 body {
-    font-family: "Roboto", sans-serif;
-    background-color: #fff;
-    line-height: 1.9;
-    color: #8c8c8c;
+    /* line-height: 1.9; */
+    /* color: #8c8c8c; */
     background-color: #efefef;
     position: relative; }
-    
-  h1, h2, h3, h4, h5, h6,
-  .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "Roboto", sans-serif;
-    color: #000; }
-  
   a {
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
@@ -23,10 +15,6 @@ body {
   
   .content {
     padding: 4rem 0; }
-  
-  .heading {
-    font-size: 2.5rem;
-    font-weight: 900; }
   
   .form-control {
     border: none;
