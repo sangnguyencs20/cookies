@@ -21,7 +21,7 @@ if ($_SESSION['cart'] == []) {
             <div class="col-md-12 py-5">
                 <p class="text-center">Không có sản phẩm nào trong giỏ hàng</p>
                 <div class="text-center">
-                 <a href="index.php" class="btn btn-success">Tiếp tục mua hàng</a>
+                 <a href="./" class="btn btn-success">Tiếp tục mua hàng</a>
                 </div>
             </div>
         </div>
@@ -86,7 +86,6 @@ if ($_SESSION['cart'] == []) {
     }
 
     function updateCart(productId, num) {
-
         $.post('api/ajax_request.php', {
             'action': 'update',
             'id': productId,

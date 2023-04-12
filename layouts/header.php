@@ -45,7 +45,7 @@ $menuItem = executeResult($sql);
 <body style="background-color: 1b1f24">
     <!-- Menustart -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3e4551">
-        <a class="navbar-brand" href="index.php"><img style="height: 50px; width: 50px;"
+        <a class="navbar-brand" href="./"><img style="height: 50px; width: 50px;"
                 src="./asset/logo/logo_trans.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +53,7 @@ $menuItem = executeResult($sql);
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link text-white" href="index.php">Trang chủ <span
+                <a class="nav-item nav-link text-white" href="./">Trang chủ <span
                         class="sr-only">(current)</span></a>
                 <?php
                 foreach ($menuItem as $item) {

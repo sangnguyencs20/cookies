@@ -90,7 +90,7 @@ require_once('layouts/header.php');
                 'note': $('[name=note]').val(),
             },
             function() {
-                window.open('complete.php', '_self');
+                // window.open('complete.php', '_self');
             })
         return false;
     }

@@ -124,6 +124,7 @@ $relatedProduct = executeResult($sql);
             ?>
         </div>
     </div>
+    
     <script type="text/javascript">
         function addMoreCart(delta) {
             num = parseInt($('[name=num]').val())

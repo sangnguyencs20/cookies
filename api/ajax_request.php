@@ -35,10 +35,10 @@ function completeCheckout()
 	foreach ($_SESSION['cart'] as $item) {
 		$totalMoney += ($item['discount'] * $item['num']);
 	}
-	$sql = "INSERT INTO `orders`(`fullname`, `user_id`, `email`, `phone_number`, `address`, `order_date`, `status`, `total_money`) VALUES ('$fullname','$userId','$email','$phone_number','$address','$orderDate',0,'$totalMoney')";
+	$sql = "INSERT INTO
+	`orders`(`fullname`, `user_id`, `email`, `phone_number`, `address`, `order_date`, `status`, `total_money`)
+	VALUES ('$fullname','$userId','$email','$phone_number','$address','$orderDate',0,'$totalMoney')";
 	execute($sql);
-
-
 
 	$sql = "SELECT * from orders where order_date = '$orderDate'";
 	$orderItem = executeResult($sql, true);
@@ -48,10 +48,13 @@ function completeCheckout()
 		$price = $item['discount'];
 		$num = $item['num'];
 		$total_money = number_format($price * $num);
-		$sql = "INSERT INTO `order_details`(`order_id`, `product_id`, `price`, `num`, `total_money`) VALUES ('$orderId','$product_id,'$price','$num','$total_money')";
+		$sql = "INSERT INTO `order_details`(`order_id`, `product_id`, `price`, `num`, `total_money`)
+		VALUES ($orderId,2,2000,2,4000)";
 		execute($sql);
 	}
-	unset($_SESSION['cart']);
+	
+	execute($sql);
+	//unset($_SESSION['cart']);
 };
 function updateCart()
 {

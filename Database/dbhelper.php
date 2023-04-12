@@ -14,6 +14,11 @@ function execute($sql)
     mysqli_close($conn);
 }
 
+function getOrderId(){
+    $conn = mysqli_connect(HOST, USERNAME, PASSWORD, DATABASE);
+    $result = mysqli_insert_id($conn);
+    return $result - 1;
+}
 
 function executeResult($sql, $isSingle = false)
 {
