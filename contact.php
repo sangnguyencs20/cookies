@@ -64,7 +64,7 @@ if (!empty($_POST)) {
       </div>
       <div class="col-md-6">
         <div class="contact-info h-100">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.874535151228!2d106.76137231488612!3d10.89713859223969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d85dcb9fa11b%3A0x25f3beafc350b072!2zMTI3IE5nw7QgVGjDrCBOaOG6rW0sIETEqSBBbiwgQsOsbmggRMawxqFuZywgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1670076028680!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.511579596332!2d106.65532151130354!3d10.772074989332111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ec3c161a3fb%3A0xef77cd47a1cc691e!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBCw6FjaCBraG9hIC0gxJDhuqFpIGjhu41jIFF14buRYyBnaWEgVFAuSENN!5e0!3m2!1svi!2s!4v1681631058345!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>

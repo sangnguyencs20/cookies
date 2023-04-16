@@ -69,8 +69,8 @@ $menuItem = executeResult($sql);
 
             <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
                 <input class="form-control mr-sm-3 mt-1 search-bar btn-sm" style="border-radius: 10px;" type="text" placeholder="Bạn đang tìm gì đấy?"
-                    aria-label="Search" name="keyword">
-                <button class="btn btn-success btn-sm my-2 my-sm-0" type="submit">Tìm kiếm</button>
+                    aria-label="Search" name="keyword" >
+                <!-- <button class="btn btn-success btn-sm my-2 my-sm-0" type="submit">Tìm kiếm</button> -->
             </form>
             <?php
             if ($user == null) {

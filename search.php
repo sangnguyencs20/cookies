@@ -26,12 +26,12 @@ if ($categoryId != null) {
 
 echo '<div><div style=" min-height: 100vh;">';
 if ($searchResult == null) {
-    echo '<h2 class="p-3 mb-3 text-white">Không tìm thấy sản phẩm nào cho từ khoá ' . $keyword . '</h2>';
+    echo '<h2 class="p-3 mb-3 text-white">Không tìm thấy sản phẩm nào cho từ khoá "' . $keyword . '"</h2>';
 } else {
     echo '<div class="container-fluid">
         <div class="row">';
 
-    echo '<h2 class="p-3 mb-3 text-white">Kết quả tìm kiếm cho từ khoá ' . $keyword . '</h2>';
+    echo '<h2 class="p-3 mb-3 text-white">Kết quả tìm kiếm cho từ khoá "' . $keyword . '"</h2>';
 echo "</div>";
 
 echo '<div class="container-fluid">

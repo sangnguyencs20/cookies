@@ -18,7 +18,7 @@ switch ($action) {
 function completeCheckout()
 {
 	if (!isset($_SESSION['cart']) || count($_SESSION) == 0) {
-		return;
+		return false;
 	}
 	$fullname = getPost('fullname');
 	$email  = getPost('email');
@@ -36,7 +36,7 @@ function completeCheckout()
 		$totalMoney += ($item['discount'] * $item['num']);
 	}
 	$sql = "INSERT INTO
-	`orders`(`fullname`, `user_id`, `email`, `phone_number`, `address`, `order_date`, `status`, `total_money`)
+	`orders`(`fullname`, `user_id`, `email`, `phone_number`, `address`, `order_date`, `status`)
 	VALUES ('$fullname','$userId','$email','$phone_number','$address','$orderDate',0,'$totalMoney')";
 	execute($sql);
 
@@ -47,14 +47,12 @@ function completeCheckout()
 		$product_id = $item['id'];
 		$price = $item['discount'];
 		$num = $item['num'];
-		$total_money = number_format($price * $num);
-		$sql = "INSERT INTO `order_details`(`order_id`, `product_id`, `price`, `num`, `total_money`)
-		VALUES ($orderId,2,2000,2,4000)";
+		$sql = "INSERT INTO `order_details`(`order_id`, `product_id`, `price`, `num`) VALUES ('$orderId','$product_id','$price','$num')";
 		execute($sql);
 	}
-	
+
 	execute($sql);
-	//unset($_SESSION['cart']);
+	unset($_SESSION['cart']);
 };
 function updateCart()
 {
