@@ -106,7 +106,7 @@ $relatedProduct = executeResult($sql);
             <?= rand(100, 400) ?> đã bán
         </p>
     </div>
-    <h2 class="text-center mt-3 mb-4 font-italic">Sản phẩm liên quan </h2>
+    <h2 class="text-center mt-3 mb-4">Sản phẩm liên quan </h2>
     <div class="container-fluid">
         <div class="row">
             <?php
