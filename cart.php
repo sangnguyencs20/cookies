@@ -10,13 +10,19 @@ $total = 0;
 if ($_SESSION['cart'] == []) {
     echo '
     <style>
+        .container-cart {
+            height: 51vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
         }
     </style>
-    <div class="container">
+    <div class="container-cart">
         <div class="row mt-5">
             <div class="col-md-12 py-5">
                 <p class="text-center">Không có sản phẩm nào trong giỏ hàng</p>
