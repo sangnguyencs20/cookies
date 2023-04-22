@@ -3,25 +3,33 @@
     .cart_icon {
         position: fixed;
         z-index: 9;
-        top: 40%;
-        right: 0px;
+        bottom: 50%;
+        right: 14px; 
     }
 
     .cart_icon img {
         cursor: pointer;
         margin-right: 0px;
         width: 60px;
+        opacity: 70%;
+    }
+
+    .cart_icon img:hover {
+        opacity: 100%;
     }
 
     .cart_icon .cart_count {
         font-weight: bold;
         position: absolute;
-        left: -22px;
-        bottom: 29px;
+        left: -15px;
+        /* bottom: 29px; */
         background-color: red;
         color: white;
-        padding: 10px;
-        border-radius: 100%;
+        /* padding: 10px; */
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        text-align: center;
     }
 
 </style>
@@ -175,7 +183,7 @@ foreach ($_SESSION['cart'] as $item) {
 </script>
 <a href="cart.php">
     <span class="cart_icon">
-        <img src="asset/photo/cart_icon2_rm.png" alt="">
+        <img src="asset/photo/cart_icon1.png" alt="">
         <span class="cart_count">
             <?= $count ?>
         </span>
