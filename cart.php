@@ -15,6 +15,12 @@ $total = 0;
 if ($_SESSION['cart'] == []) {
     echo '
     <style>
+        .container-cart {
+            height: 51vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         .container {
             display: flex;
             justify-content: center;
