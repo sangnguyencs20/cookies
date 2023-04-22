@@ -113,9 +113,10 @@ session_start();
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <button type="submit" class="btnsubmit mt-3">Đăng kí</button>
+                                <button type="submit" class="btnsubmit mt-3 mb-3">Đăng kí</button>
                             </div>
                         </div>
+                        <p>Đã có tài khoản? <a href="login.php">Đăng nhập ngay!</a></p>
                     </form>
                 </div>
             </div>
