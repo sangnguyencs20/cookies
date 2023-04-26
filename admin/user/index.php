@@ -2,7 +2,7 @@
 $title='User';
 $baseUrl = '../';
     require_once('../layouts/header.php');
-    $sql = "Select user.*,role.name as role_name from user left join role on user.role_id = role.id where user.deleted=0";
+    $sql = "SELECT user.*,role.name as role_name from user left join role on user.role_id = role.id where user.deleted=0";
     $data = executeResult($sql);
 ?>
 <div class="row" style="margin-top:20px;">

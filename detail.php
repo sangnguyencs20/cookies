@@ -2,10 +2,10 @@
 require_once("layouts/header.php");
 $productId = getGet('id');
 
-$sql = "Select product.*,category.name as category_name from product left join category on product.category_id = category.id where product.id = $productId";
+$sql = "SELECT product.*,category.name as category_name from product left join category on product.category_id = category.id where product.id = $productId";
 $product = executeResult($sql, true);
 $category_id = $product['category_id'];
-$sql = "select product.*,category.name as category_name from product left join category on product.category_id = category_id where product.category_id = $category_id limit 0,4";
+$sql = "SELECT product.*,category.name as category_name from product left join category on product.category_id = category_id where product.category_id = $category_id limit 0,4";
 $relatedProduct = executeResult($sql);
 
 ?>

@@ -1,7 +1,7 @@
 <?php
 require_once 'layouts/header.php';
 $id = getGet('id');
-$sql = "Select * from user where id = '$id'";
+$sql = "SELECT * from user where id = '$id'";
 $user = executeResult($sql, true);
 ?>
 <style>

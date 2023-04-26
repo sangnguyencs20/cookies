@@ -9,7 +9,7 @@ if(!empty($_POST)) {
 		execute($sql);
 	} else {
 		//insert
-		$sql = "insert into Category(name) values ('$name')";
+		$sql = "INSERT into Category(name) values ('$name')";
 		execute($sql);
 	}
 }

@@ -20,7 +20,7 @@ if(!empty($_POST)){
         echo "<script>alert('Cập nhật thành công')</script>";
     }else{
         // insert
-        $sql = "insert into product (title,price,discount,thumbnail,description,category_id,created_at,updated_at,deleted) values ('$title', '$price','$discount', '$thumbnail','$description','$category_id','$created_at','$updated_at',0)";
+        $sql = "INSERT into product (title,price,discount,thumbnail,description,category_id,created_at,updated_at,deleted) values ('$title', '$price','$discount', '$thumbnail','$description','$category_id','$created_at','$updated_at',0)";
         execute($sql);
         die();
         echo "<script>alert('Thêm mới thành công')</script>";

@@ -3,7 +3,7 @@ $title = 'Order';
 $baseUrl = '../';
 require_once('../layouts/header.php');
 // pending, approved,cancel
-$sql = "Select * from orders order by status asc,order_date desc ";
+$sql = "SELECT * from orders order by status asc,order_date desc ";
 $data = executeResult($sql);
 ?>
 <div class="row" style="margin-top:20px;">

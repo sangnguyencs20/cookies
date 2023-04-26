@@ -2,7 +2,7 @@
 $title='Product';
 $baseUrl = '../';
     require_once('../layouts/header.php');
-    $sql = "select product.*, category.name as category_name from product left join category on product.category_id = category.id where product.deleted = 0";
+    $sql = "SELECT product.*, category.name as category_name from product left join category on product.category_id = category.id where product.deleted = 0";
 	$data = executeResult($sql);
 ?>
 <div class="row" style="margin-top:20px;">

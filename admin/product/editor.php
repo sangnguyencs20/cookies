@@ -6,7 +6,7 @@ $id = $thumbnail = $title = $price = $discount = $category_id = $description =  
 require_once('form_save.php');
 $id = getGet('id');
 if ($id != '' && $id > 0) {
-    $sql = "Select * from product where id = '$id' and deleted=0";
+    $sql = "SELECT * from product where id = '$id' and deleted=0";
     $userItem = executeResult($sql, true);
     if ($userItem != null) {
         $thumbnail = $userItem['thumbnail'];
@@ -21,7 +21,7 @@ if ($id != '' && $id > 0) {
 } else {
     $id = 0;
 }
-$sql = "select * from category";
+$sql = "SELECT * from category";
 $categoryItem = executeResult($sql);
 ?>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

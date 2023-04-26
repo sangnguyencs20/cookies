@@ -8,9 +8,9 @@
 
 <?php
 require_once("layouts/header.php");
-$sql = "select * from category";
+$sql = "SELECT * from category";
 $menuItem = executeResult($sql);
-$sql = "select product.*, category.name as category_name from product left join category on product.category_id = category.id order by updated_at asc limit 0,8 ";
+$sql = "SELECT product.*, category.name as category_name from product left join category on product.category_id = category.id order by updated_at asc limit 0,8 ";
 // Bắt đầu từ vị trị thứ 0 và lấy ra 8 phần tử 
 $newProductItem = executeResult($sql);
 
@@ -18,7 +18,7 @@ $sql = "SELECT COUNT(*) FROM category";
 $countResult = executeResult($sql);
 $numberOfCategory = (int) $countResult[0]['COUNT(*)'];
 
-$sql = "select name from category";
+$sql = "SELECT name from category";
 $categoryList = executeResult($sql);
 ?>
 <style>

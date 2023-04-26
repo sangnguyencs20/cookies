@@ -4,7 +4,7 @@ require_once('utils/utility.php');
 require_once('Database/dbhelper.php');
 $user = getUserToken();
 
-$sql = "select * from category";
+$sql = "SELECT * from category";
 $menuItem = executeResult($sql);
 
 ?>

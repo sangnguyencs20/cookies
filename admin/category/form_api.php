@@ -16,9 +16,10 @@ if(!empty($_POST)){
     
 }
 function deleteCategory(){
-
     $id = getPost('id');
-    $sql = "Select count(*) as total form product where category_id=$id and deleted=0";
+    $sql = "SELECT count(*) AS total 
+    FROM product 
+    WHERE category_id=$id AND deleted=0";
     $data= executeResult($sql,true);
     $total = $data['total'];
     if($total>0){

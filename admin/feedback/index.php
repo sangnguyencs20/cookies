@@ -2,7 +2,7 @@
 $title='Feedback';
 $baseUrl = '../';
     require_once('../layouts/header.php');
-   $sql = "Select * from feedback order by status asc,updated_at desc" ;
+   $sql = "SELECT * from feedback order by status asc,updated_at desc" ;
     $data = executeResult($sql);
 ?>
 <div class="row" style="margin-top:20px;">

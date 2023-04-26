@@ -6,7 +6,7 @@
     require_once('form_save.php');
     $id =getGet('id');
     if($id != '' && $id>0){
-        $sql = "Select * from user where id = '$id'";
+        $sql = "SELECT * from user where id = '$id'";
    $userItem = executeResult($sql,true);
         if($userItem!=null){
             $thumbnail=$userItem['thumbnail'];
@@ -23,7 +23,7 @@
         $id = 0;
     }
  
-    $sql="select *from role";
+    $sql="SELECT *from role";
     $roleitem= executeResult($sql);
 ?>
 <div class="row" style="margin-top: 20px;">

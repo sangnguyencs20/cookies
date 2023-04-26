@@ -7,13 +7,13 @@ $baseUrl = '../';
   $id = $name = '';
   if(isset($_GET['id'])){
     $id = getGet('id');
-    $sql = "Select * from category where id = $id";
+    $sql = "SELECT * from category where id = $id";
     $data= executeResult($sql,true);
     if($data!=null){
         $name = $data['name'];
     }
   }
-  $sql = "select * from category";
+  $sql = "SELECT * from category";
   $data = executeResult($sql);
 ?>
 <div class="row" style="margin-top:20px;">

@@ -2,9 +2,9 @@
 require_once ("layouts/header.php");
 $category_id = getGet('id');
 if($category_id == null || $category_id ==''){
-$sql = "select product.*, category.name as category_name from product left join category on product.category_id = category.id order by product.updated_at asc limit 0,20 ";}
+$sql = "SELECT product.*, category.name as category_name from product left join category on product.category_id = category.id order by product.updated_at asc limit 0,20 ";}
 else{
-    $sql = "select product.*, category.name as category_name from product left join category on product.category_id = category.id where product.category_id = $category_id order by updated_at asc limit 0,8 ";
+    $sql = "SELECT product.*, category.name as category_name from product left join category on product.category_id = category.id where product.category_id = $category_id order by updated_at asc limit 0,8 ";
 }
 $categoryItem  = executeResult($sql);
 

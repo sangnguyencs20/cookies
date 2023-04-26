@@ -9,7 +9,7 @@ if(!empty($_POST)){
     $role_id = getPost('role_id');
     $created_at = $updated_at = date("Y-m-d H:i:s");
     $thumbnail =  moveFile('thumbnail');
-$sql= "Select * from user where email = '$email'";
+$sql= "SELECT * from user where email = '$email'";
 $userItem = executeResult($sql,true);
 if($id>0){
 // update

@@ -7,7 +7,7 @@ if (!empty($_POST)) {
     if (empty($fullname) || empty($email) || strlen($pwd) < 6) {
     } else {
         // validate thanh cong 
-        $userExits = executeResult("select * from user where email = '$email'", true);
+        $userExits = executeResult("SELECT * from user where email = '$email'", true);
         if ($userExits != null) {
             $msg = 'Email đã được đăng kí trên hệ thống';
         } else {

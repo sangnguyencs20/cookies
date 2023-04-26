@@ -12,14 +12,14 @@ require_once('./layouts/header.php')
 $searchResult = [];
 if (isset($_POST['keyword'])) {
     $keyword = $_POST['keyword'];
-    $sql = "select * from product where title like '%$keyword%'";
+    $sql = "SELECT * from product where title like '%$keyword%'";
     $searchResult = executeResult($sql);
 }
 
-$sql = "select id from category where name like '%$keyword%'";
+$sql = "SELECT id from category where name like '%$keyword%'";
 $categoryId = executeResult($sql, true);
 if ($categoryId != null) {
-    $sql = "select * from product where category_id = " . $categoryId['id'];
+    $sql = "SELECT * from product where category_id = " . $categoryId['id'];
     $searchResult = executeResult($sql);
 }
 

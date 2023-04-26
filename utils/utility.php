@@ -43,11 +43,11 @@
             return $_SESSION['user'];
         }
         $token = getCookie('token');
-        $sql = "Select * from tokens where token = '$token'";
+        $sql = "SELECT * FROM tokens WHERE token = '$token'";
         $item = executeResult($sql,true);
         if($item!=null){
             $userId = $item['user_id'];
-            $sql = "Select * from user where id = '$userId' and deleted=0 ";
+            $sql = "SELECT * FROM user WHERE id = '$userId' AND deleted = 0 ";
             $item = executeResult($sql,true);
             if($item !=null){
                 $_SESSION['user'] = $item;
@@ -73,7 +73,8 @@
     }
     function fixUrl($thumbnail,$rootPath= "../../"){
         if(stripos($thumbnail,'http://') !== false || stripos($thumbnail,'https://') !== false){           
-        }else{
+        }
+        else{
             $thumbnail = $rootPath.$thumbnail;
         }
         return $thumbnail;
