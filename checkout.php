@@ -28,14 +28,14 @@ require_once('layouts/header.php');
                         $total += $item['discount'] * $item['num'];
                         $totalnum += $item['num'];
                         echo '<tr>
-    <td style="text-align: center; vertical-align: middle;"><img src="' . $item['thumbnail'] . '" class="img-thumbnail" style="max-width: 100px;"/></td>
-    <td style="text-align: center; vertical-align: middle;">' . $item['title'] . '</td>
-    <td style="text-align: center; vertical-align: middle;">' . number_format($item['discount']) . ' VND</td>
-    <td style="text-align: center; vertical-align: middle;">
-    <p class="font-weight-light text-center mt-3">' . $item['num'] . '</p>
-    </td>
-    <td style="text-align: center; vertical-align: middle;">' . number_format($item['discount'] * $item['num']) . ' VND</td>
-</tr>';
+                            <td style="text-align: center; vertical-align: middle;"><img src="' . $item['thumbnail'] . '" class="img-thumbnail" style="max-width: 100px;"/></td>
+                            <td style="text-align: center; vertical-align: middle;">' . $item['title'] . '</td>
+                            <td style="text-align: center; vertical-align: middle;">' . number_format($item['discount']) . ' VND</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                            <p class="font-weight-light text-center mt-3">' . $item['num'] . '</p>
+                            </td>
+                            <td style="text-align: center; vertical-align: middle;">' . number_format($item['discount'] * $item['num']) . ' VND</td>
+                        </tr>';
                     }
                     ?>
                     <tr>

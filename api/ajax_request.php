@@ -36,9 +36,10 @@ function completeCheckout()
 		$totalMoney += ($item['discount'] * $item['num']);
 	}
 	$sql = "INSERT INTO
-	`orders`(`fullname`, `user_id`, `email`, `phone_number`, `address`, `order_date`, `status`)
+	`orders` (`fullname`, `user_id`, `email`, `phone_number`, `address`, `order_date`, `status`, `total_money`)
 	VALUES ('$fullname','$userId','$email','$phone_number','$address','$orderDate',0,'$totalMoney')";
 	execute($sql);
+
 
 	$sql = "SELECT * from orders where order_date = '$orderDate'";
 	$orderItem = executeResult($sql, true);
@@ -47,7 +48,8 @@ function completeCheckout()
 		$product_id = $item['id'];
 		$price = $item['discount'];
 		$num = $item['num'];
-		$sql = "INSERT INTO `order_details`(`order_id`, `product_id`, `price`, `num`) VALUES ('$orderId','$product_id','$price','$num')";
+		$sql = "INSERT INTO `order_details`(`order_id`, `product_id`, `price`, `num`) 
+		VALUES ('$orderId','$product_id','$price','$num')";
 		execute($sql);
 	}
 
@@ -92,7 +94,11 @@ function addToCart()
 	}
 
 	if (!$isFind) {
-		$sql =  "Select product.*,category.name as category_name from product left join category on product.category_id = category.id where product.id = $id";
+		$sql =  "SELECT product.*,category.name AS category_name 
+		FROM product LEFT JOIN category 
+		ON product.category_id = category.id 
+		WHERE product.id = $id";
+
 		$product = executeResult($sql, true);
 		$product['num'] = $num;
 		$_SESSION['cart'][] = $product;
