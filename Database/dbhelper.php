@@ -4,7 +4,6 @@ require_once('config.php');
 function execute($sql)
 {
     // open connection
-    echo '<script>'.$sql.'</script>';
     $conn = mysqli_connect(HOST, USERNAME, PASSWORD, DATABASE);
     mysqli_set_charset($conn, 'utf8');
 

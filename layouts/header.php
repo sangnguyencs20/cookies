@@ -8,9 +8,16 @@ $sql = "SELECT * from category";
 $menuItem = executeResult($sql);
 
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-
+<style>
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+</style>
 <head>
     <title>Cookie</title>
 
@@ -74,20 +81,34 @@ $menuItem = executeResult($sql);
                         placeholder="Bạn đang tìm gì đấy?" aria-label="Search" name="keyword">
                     <!-- <button class="btn btn-success btn-sm my-2 my-sm-0" type="submit">Tìm kiếm</button> -->
                 </form>
-                <?php
-                if ($user == null) {
-                    echo '<a href="admin/authen/register.php"><button class="btn btn-primary mt-1 ml-3 btn-sm">Đăng ký</button></a>';
-                    echo '<a href="admin/authen/login.php"><button class="btn btn-primary mt-1 ml-3 btn-sm">Đăng nhập</button></a>';
-                } else {
-                    $id = $user['id'];
-                    echo '<a href="profile.php?id=' . $id . '"><button class="btn btn-primary mt-1 ml-3 btn-sm">Tài khoản</button></a>';
-                    echo '<a href="admin/authen/logout.php"><button class="btn btn-danger mt-1 ml-3 btn-sm">Đăng xuất</button></a>';
-                }
-                ?>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tài khoản
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <?php
+                        if ($user == null) {
+                            echo '<a class="dropdown-item" href="admin/authen/register.php">Đăng ký</a>';
+                            echo '<a class="dropdown-item" href="admin/authen/login.php">Đăng nhập</a>';
+                        } else {
+                        $id = $user['id'];
+                            echo '<a class="dropdown-item" href="profile.php?id=' . $id . '">Thông tin của tôi</a>';
+                            echo '<a class="dropdown-item" href="purchase.php?id='. $id. '">Đơn hàng</a>';
+                            echo '<a class="dropdown-item" href="admin/authen/logout.php">Đăng xuất</a>';
+                        }
+                        ?>
+                    </div>
+                </div>
 
-                <!-- <p class="mt-2" style="font-weight:600; color: purple;"><?= ($user['fullname']) ?></p>
-            <a href="../../Project_Webbanhang/admin/authen/logout.php"><button class="btn btn-danger mt-1 ml-3">Log
-                    out</button></a> -->
-            </div>
-        </div>
-    </nav>
+<!-- Include the required JavaScript and jQuery libraries -->
+
+
+
+<!-- <p class="mt-2" style="font-weight:600; color: purple;"><?= ($user['fullname']) ?></p>
+<a href="../../Project_Webbanhang/admin/authen/logout.php"><button class="btn btn-danger mt-1 ml-3">Log
+    out</button></a> -->
+</div>
+</div>
+</nav>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
