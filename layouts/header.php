@@ -14,10 +14,11 @@ $menuItem = executeResult($sql);
 <!DOCTYPE html>
 <html lang="en">
 <style>
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 </style>
+
 <head>
     <title>Cookie</title>
 
@@ -55,11 +56,7 @@ $menuItem = executeResult($sql);
         <div class="container-fluid">
             <a class="navbar-brand" href="./"><img style="height: 50px; width: 50px;" src="./asset/logo/logo_trans.png"
                     alt=""></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link text-white" href="./">Trang chủ <span
@@ -75,14 +72,14 @@ $menuItem = executeResult($sql);
             </div>
 
             <div class="nav-item d-flex align-items-right">
-
-                <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
-                    <input class="form-control mr-sm-3 mt-1 search-bar btn-sm" style="border-radius: 10px;" type="text"
+                <form class="form-inline my-1 my-lg-0" action="search.php" method="POST">
+                    <input class="form-control mr-sm-2 mt-1 search-bar btn-sm" style="border-radius: 10px;" type="text"
                         placeholder="Bạn đang tìm gì đấy?" aria-label="Search" name="keyword">
                     <!-- <button class="btn btn-success btn-sm my-2 my-sm-0" type="submit">Tìm kiếm</button> -->
                 </form>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="dropdown my-1 mx-2 btn-sm">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" id="userDropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Tài khoản
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
@@ -91,24 +88,29 @@ $menuItem = executeResult($sql);
                             echo '<a class="dropdown-item" href="admin/authen/register.php">Đăng ký</a>';
                             echo '<a class="dropdown-item" href="admin/authen/login.php">Đăng nhập</a>';
                         } else {
-                        $id = $user['id'];
+                            $id = $user['id'];
                             echo '<a class="dropdown-item" href="profile.php?id=' . $id . '">Thông tin của tôi</a>';
-                            echo '<a class="dropdown-item" href="purchase.php?id='. $id. '">Đơn hàng</a>';
+                            echo '<a class="dropdown-item" href="purchase.php?id=' . $id . '">Đơn hàng</a>';
                             echo '<a class="dropdown-item" href="admin/authen/logout.php">Đăng xuất</a>';
                         }
                         ?>
                     </div>
                 </div>
 
-<!-- Include the required JavaScript and jQuery libraries -->
+                <!-- Include the required JavaScript and jQuery libraries -->
 
 
 
-<!-- <p class="mt-2" style="font-weight:600; color: purple;"><?= ($user['fullname']) ?></p>
+                <!-- <p class="mt-2" style="font-weight:600; color: purple;"><?= ($user['fullname']) ?></p>
 <a href="../../Project_Webbanhang/admin/authen/logout.php"><button class="btn btn-danger mt-1 ml-3">Log
     out</button></a> -->
-</div>
-</div>
-</nav>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
