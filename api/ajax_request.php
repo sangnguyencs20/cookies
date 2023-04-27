@@ -52,7 +52,6 @@ function completeCheckout()
 		VALUES ('$orderId','$product_id','$price','$num')";
 		execute($sql);
 	}
-
 	execute($sql);
 	unset($_SESSION['cart']);
 };

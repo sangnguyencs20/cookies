@@ -9,9 +9,10 @@ $result = executeResult($sql);
 if ($result == null) {
     echo '<h1 class="text-center" style="margin-top: 50px; font-size: 24px; color: #666;">Không có đơn hàng nào</h1>';
     die();
+}
 if ($result['status'] == 0) {
     $status_label = '<span class="badge bg-warning">Chưa xử lý</span>';
-  } 
+} 
 elseif ($result['status'] == 1) {
     $status_label = '<span class="badge bg-success">Đã xử lý</span>';
 }

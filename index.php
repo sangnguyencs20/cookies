@@ -9,6 +9,7 @@
 <?php
 require_once("layouts/header.php");
 $sql = "SELECT * from category";
+
 $menuItem = executeResult($sql);
 $sql = "SELECT product.*, category.name as category_name from product left join category on product.category_id = category.id order by updated_at asc limit 0,8 ";
 // Bắt đầu từ vị trị thứ 0 và lấy ra 8 phần tử 
