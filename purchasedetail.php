@@ -23,7 +23,9 @@
     elseif ($status == 1) {
         $status_label = '<span class="badge bg-success">Đã xử lý</span>';
     }
-    
+    else{
+        $status_label = '<span class="badge bg-danger">Đã hủy</span>';
+    }
     echo "<div class='container' style = 'min-height: 100vh;'>";
     echo "<h3>Thông tin đơn hàng</h3>";
     echo "<div><h5>Trạng thái đơn hàng: $status_label </h5></div>";
