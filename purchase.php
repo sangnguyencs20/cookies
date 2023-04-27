@@ -9,6 +9,14 @@ $result = executeResult($sql);
 if ($result == null) {
     echo '<h1 class="text-center">Không có đơn hàng nào</h1>';
     die();
+if ($order['status'] == 0) {
+    $status_label = '<span class="badge bg-warning">Chưa xử lý</span>';
+  } 
+elseif ($order['status'] == 1) {
+    $status_label = '<span class="badge bg-success">Đã xử lý</span>';
+}
+else{
+    $status_label = '<span class="badge bg-danger">Đã hủy</span>';
 }
 ?>
 
@@ -79,7 +87,7 @@ if ($result == null) {
             echo '<td>' . $order['phone_number'] . '</td>';
             echo '<td>' . $order['address'] . '</td>';
             echo '<td>' . $order['order_date'] . '</td>';
-            echo '<td><span class="status-badge ' . ($order['status'] == 0 ? 'pending' : 'confirmed') . '">' . ($order['status'] == 0 ? 'Đang chờ' : 'Đã xác nhận') . '</span></td>';
+            echo '<td>'.$status_label.'</td>';
             echo '<td>' . $order['total_money'] . '</td>';
             echo '<td><a href="purchasedetail.php?id=' . $order['id'] . '">Chi tiết</a></td>'; // Nút "Chi tiết"
             echo '</tr>';
