@@ -7,9 +7,8 @@ $id = getGet('id');
 $sql = "SELECT * FROM orders WHERE user_id = '$id'";
 $result = executeResult($sql);
 if ($result == null) {
-    echo '<h1 class="text-center">Không có đơn hàng nào</h1>';
+    echo '<h1 class="text-center" style="margin-top: 50px; font-size: 24px; color: #666;">Không có đơn hàng nào</h1>';
     die();
-}
 if ($result['status'] == 0) {
     $status_label = '<span class="badge bg-warning">Chưa xử lý</span>';
   } 
